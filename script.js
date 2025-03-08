@@ -11,6 +11,8 @@ const diceEl = document.querySelector('.dice');
 const buttonNew = document.querySelector('.btn--new');
 const buttonRoll = document.querySelector('.btn--roll');
 const buttonHold = document.querySelector('.btn--hold');
+let player0Name = document.getElementById('name--0');
+let player1Name = document.getElementById('name--1');
 
 let scores, currentScore, activePlayer, playing;
 
