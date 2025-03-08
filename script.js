@@ -19,6 +19,7 @@ score0El.textContent = 0;
 score1El.textContent = 0;
 diceEl.classList.add('hidden');
 
+//Initial game settings
 const init = function () {
   scores = [0, 0];
   currentScore = 0;
@@ -34,6 +35,15 @@ const init = function () {
   player0El.classList.add('player--active');
 };
 init();
+
+//Player names:
+const names = function () {
+  let player0P = prompt('Unesite ime prvog igraca');
+  player0Name.textContent = player0P;
+  let player1P = prompt('Unesite ime drugog igraca');
+  player1Name.textContent = player1P;
+};
+names();
 
 const switchPlayer = function () {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
