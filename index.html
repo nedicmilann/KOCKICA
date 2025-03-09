@@ -9,6 +9,23 @@
   </head>
   <body>
     <main>
+      <div class="modal-name">
+        <div class="modal-content">
+          <h2>Enter Player Names</h2>
+          <input type="text" id="player0-name" placeholder="Player 1 Name" />
+          <input type="text" id="player1-name" placeholder="Player 2 Name" />
+          <button class="btn btn--start">Start Game</button>
+        </div>
+      </div>
+      <div class="overlay"></div>
+
+      <div class="modal hidden">
+        <div class="modal-content">
+          <p class="winner-text">Player X Wins!</p>
+          <button class="btn btn--close">❌ Close</button>
+        </div>
+      </div>
+      <div class="overlay hidden"></div>
       <section class="player player--0 player--active">
         <h2 class="name" id="name--0">Player 1</h2>
         <p class="score" id="score--0">43</p>
