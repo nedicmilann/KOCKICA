@@ -256,8 +256,8 @@ main {
   text-align: center;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   z-index: 20;
-  width: 50rem; /* Povećana širina */
-  height: 35rem; /* Povećana visina */
+  width: 50rem;
+  height: 35rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -272,26 +272,26 @@ main {
 
 .score-table th,
 .score-table td {
-  padding: 2rem; /* Još veća polja */
+  padding: 2rem;
   border: 2px solid #ddd;
-  font-size: 2.5rem; /* Povećan font */
+  font-size: 2.5rem;
 }
 
 .score-table th {
   background: #c7365f;
   color: white;
-  font-size: 2.7rem; /* Povećan font naslova */
+  font-size: 2.7rem;
 }
 
 .btn--close-score {
   background: #c7365f;
   color: white;
   border: none;
-  padding: 1.5rem 3rem; /* Još veće dugme */
+  padding: 1.5rem 3rem;
   border-radius: 10px;
   cursor: pointer;
   margin-top: 2.5rem;
-  font-size: 2rem; /* Povećan font dugmeta */
+  font-size: 2rem;
 }
 
 .overlay-score {
