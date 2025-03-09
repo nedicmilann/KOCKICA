@@ -9,6 +9,33 @@
   </head>
   <body>
     <main>
+      <!-- Modal za prikaz rezultata -->
+      <div class="modal-score hidden">
+        <div class="modal-content">
+          <h2>Game Results</h2>
+          <table class="score-table">
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th>Wins</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="table-name-0">Player 1</td>
+                <td id="table-wins-0">0</td>
+              </tr>
+              <tr>
+                <td id="table-name-1">Player 2</td>
+                <td id="table-wins-1">0</td>
+              </tr>
+            </tbody>
+          </table>
+          <button class="btn btn--close-score">❌ Close</button>
+        </div>
+      </div>
+      <div class="overlay-score hidden"></div>
+
       <div class="modal-name">
         <div class="modal-content">
           <h2>Enter Player Names</h2>

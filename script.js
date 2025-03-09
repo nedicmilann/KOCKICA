@@ -20,9 +20,16 @@ const modalText = document.querySelector('.winner-text');
 const playerNameModal = document.querySelector('.modal-name');
 const playerNameBtn = document.querySelector('.btn--start');
 const playerNameModalOverlay = document.querySelector('.overlay');
+const table = document.querySelector('.modal-score');
+const player0Table = document.getElementById('table-name-0');
+const player1Table = document.getElementById('table-name-1');
+const player0Wins = document.getElementById('table-wins-0');
+const player1Wins = document.getElementById('table-wins-1');
+const btnCloseScore = document.querySelector('.btn--close-score');
 
 //Variables:
 let scores, currentScore, activePlayer, playing;
+let wins = [0, 0];
 
 //Starting conditions
 score0El.textContent = 0;
@@ -51,6 +58,8 @@ const names = function () {
   player0Name.textContent = player0P;
   let player1P = document.getElementById('player1-name').value.trim();
   player1Name.textContent = player1P;
+  player0Table.textContent = player0P;
+  player1Table.textContent = player1P;
 };
 
 //Switching players logic:
@@ -60,6 +69,17 @@ const switchPlayer = function () {
   currentScore = 0;
   player0El.classList.toggle('player--active');
   player1El.classList.toggle('player--active');
+};
+
+//Score table logic:
+const tableWins = function () {
+  if (activePlayer === 0) {
+    wins[0]++;
+    player0Wins.textContent = wins[0];
+  } else if (activePlayer === 1) {
+    wins[1]++;
+    player1Wins.textContent = wins[1];
+  }
 };
 
 //Winner modal:
@@ -123,11 +143,22 @@ buttonHold.addEventListener('click', function () {
         .querySelector(`.player--${activePlayer}`)
         .classList.remove('player--active');
       diceEl.classList.add('hidden');
+      tableWins();
       modalWinner();
     } else {
       //Switch to the next player
       switchPlayer();
     }
+  }
+});
+
+//Score table showing/closing
+btnCloseScore.addEventListener('click', function () {
+  table.classList.add('hidden');
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 't' || e.key === 'T') {
+    table.classList.toggle('hidden');
   }
 });
 
