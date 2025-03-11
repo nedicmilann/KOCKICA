@@ -124,7 +124,7 @@ playerNameBtn.addEventListener('click', function () {
   names();
 });
 
-//ROLL button logic:
+//HOLD button logic:
 buttonHold.addEventListener('click', function () {
   if (playing) {
     //1. Add current score to active player
